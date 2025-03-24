@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Daily Lotto - Your go-to platform for the latest lottery results, betting tips, and gambling insights in Australia. Try your luck today!">
+        <meta name="keywords" content="Daily Lotto, Australian Lottery, Lotto Results, Gambling, Betting, Lottery Tips">
+        <meta name="author" content="Daily Lotto">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://dailylotto.com.au">
+        <title>Daily Lotto - Latest Lottery Results & Betting Insights</title>
+        <link rel="shortcut icon" href="images/fav-icon-daily-lotto.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    </head>    
+    <body>
+        <header>
+            <div class="header-top-bar">
+                <p><img src="images/age-verify.png" alt="Age Verify">Accessible only persons aged 18 and over. Please gamble responsibly.</p>
+            </div>
+            <div class="header-menu-bar">
+                <div class="container">
+                    <div class="header-menu-bar-flex">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img src="images/daily-lotto-dark.png" alt="Daily Lotto">
+                            </a>
+                        </div>
+                        <div class="header-button">
+                            <button class="signup-btn" onclick="openRegisterPopup()">Sign up</button>
+                            <button class="login-btn" onclick="openLoginPopup()">Log in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="registerPopup" class="popup-container">
+                    <div class="popup">
+                        <div class="popup-right">
+                            <h2>Create an account</h2>
+                            <p>Create an account to join thousands of users worldwide</p>
+                            <form id="registerForm">
+                                <div class="name-flex">
+                                    <div>
+                                        <label>First name</label>
+                                        <input type="text" id="fullName" required>
+                                    </div>
+                                    <div>
+                                        <label>Last name</label>
+                                        <input type="text" id="lastName" required>
+                                    </div>
+                                </div>
+                
+                                <label>Email address</label>
+                                <input type="email" id="email" required>
+                
+                                <label>Password</label>
+                                <input type="password" id="password" required>
+                                <p class="password-info">Use 8+ characters with a mix of letters, numbers & symbols</p>
+                
+                                <label>Confirm Password</label>
+                                <input type="password" id="confirmPassword" required><br>
+                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="ageConfirm" required> I confirm that I am 18 years older
+                                </label>
+                
+                                <button type="submit" class="register-btn">Register</button>
+                            </form>
+                            <p class="have-account">Already have an account? <a href="#" onclick="openLoginPopup()">Log in</a></p>
+                        </div>
+                        <div class="popup-left">
+                            
+                            <span class="close-btn" onclick="closeRegisterPopup()">&times;</span></div>
+                    </div>
+                </div>
+                <div id="loginPopup" class="popup-container">
+                    <div class="popup">
+                        <div class="popup-right">
+                            <h2>Login to your account</h2>
+                            <p>Login to your account to join thousands of users worldwide</p>
+                            <form id="loginForm">
+                                <label>Email address</label>
+                                <input type="email" id="loginEmail" required>
+                
+                                <label>Password</label>
+                                <input type="password" id="loginPassword" required>
+                
+                                <button type="submit" class="register-btn">Login</button>
+                            </form>
+                            <p class="have-account"><a href="#" onclick="openForgotPasswordPopup()">Forgot Password?</a></p>
+                            <p class="have-account">Don't have an account? <a href="#" onclick="openRegisterPopup()">Register</a></p>
+                        </div>
+                        <div class="popup-left-login">
+                            <span class="close-btn" onclick="closeLoginPopup()">&times;</span></div>
+                    </div>
+                </div>
+                <div id="forgotPasswordPopup" class="popup-container">
+                    <div class="popup">
+                        <div class="popup-right">
+                            <h2>RESET PASSWORD</h2>
+                            <p>Enter your email to receive a reset link</p>
+                            <form id="forgotPasswordForm">
+                                <label>Email address</label>
+                                <input type="email" id="forgotPasswordEmail" required>
+                
+                                <button type="submit" class="register-btn">Send Reset Link</button>
+                            </form>
+                            <p class="have-account"><a href="#" onclick="openLoginPopup()">Back to Login</a></p>
+                        </div>
+                        <div class="popup-left-login">
+                            <span class="close-btn" onclick="closeForgotPasswordPopup()">&times;</span></div>
+                    </div>
+                </div>
+                <style>
+                    .popup-container {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 999;
+                    }
+                    .popup {
+                        display: flex;
+                        width: 1100px;
+                        background: #fff;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        padding: 20px;
+                        gap: 20px;
+                        height: 650px;
+                    }
+                    .popup-left {
+                        width: 50%;
+                        background: url('images/register-bg.png') center/cover;
+                        background-position: 85% 50%;
+                        border-radius: 30px;
+                    }
+                    .popup-left-login {
+                        width: 50%;
+                        background: url('images/login-bg.png') center/cover;
+                        background-position: center;
+                        min-height: 550px;
+                        border-radius: 30px;
+                    }
+                    .popup-right {
+                        width: 50%;
+                        padding: 30px 40px 40px 40px;
+                        text-align: left;
+                        border-radius: 30px;
+                        background: #E1EEF4;
+                    }
+                    .popup-right h2 {
+                        color: #004896;
+                        font-family: "Inter", sans-serif;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .popup-right p {
+                        color: #0C0C0C;
+                        font-family: "Inter", sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding-top: 5px;
+                        padding-bottom: 15px;
+                    }
+                    p.password-info {
+                        color: #004896;
+                        font-family: "Inter", sans-serif;
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        padding: 0px;
+                    }
+                    .close-btn {
+                        font-size: 32px;
+                        color: #ffffff;
+                        float: right;
+                        cursor: pointer;
+                        font-weight: 600;
+                        position: relative;
+                        left: -16px;
+                    }
+                    .close-btn:hover {
+                        color: #f8f3f3;
+                    }
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .name-flex{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        padding-top: 14px;
+                    }
+                    label {
+                        margin-top: 15px;
+                        color: #0C0C0C;
+                        font-family: "Inter", sans-serif;
+                        font-size: 15px;
+                        font-weight: 400;
+                    }
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 5px;
+                        border-radius: 40px;
+                        background: #FFF; 
+                        border: 1px solid transparent;
+                        outline: none;
+                    }
+                    input:hover {
+                        border-color: #0976eb;
+                    }
+                    label.checkbox-container {
+                        display: flex;
+                        align-items: baseline;
+                        gap: 4px;
+                    }
+                    input[type="checkbox"] {
+                        width: 22px;
+                        position: relative;
+                        top: 2px;
+                    }
+                    .checkbox-container {
+                        color: #0C0C0C;
+                        font-family: "Inter", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    button.register-btn {
+                        border-radius: 40px;
+                        background: linear-gradient(180deg, #27A5E4 0%, #004896 100%);
+                        padding: 10px;
+                        margin-top: 15px;
+                        cursor: pointer;
+                        border: none;
+                        color: #FFF;
+                        font-family: "Inter", sans-serif;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-top: 25px;
+                    }
+                    button.register-btn:hover {
+                        background: linear-gradient(180deg, #004896 0%, #27A5E4 100%);
+                    }
+                    p.have-account {
+                        color: #0C0C0C;
+                        font-family: "Inter", sans-serif;
+                        font-size: 14px;
+                        text-align: center;
+                        padding-top: 25px;
+                    }
+                    .have-account > a {
+                        color: #004896;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        font-weight: 500;
+                    }
+                    @media (max-width: 768px) {
+                        .popup {
+                            flex-direction: column;
+                            width: 96%;
+                        }
+
+                        .popup-left,
+                        .popup-left-login {
+                            display: none;
+                        }
+
+                        .popup-right {
+                            width: 100%;
+                        }
+                        .popup-right h2 {
+                            font-size: 32px;
+                            line-height: normal;
+                            padding-top: 15px;
+                        }
+                        button.register-btn {
+                            margin-top: 10px;
+                        }
+                        p.have-account {
+                            padding: 15px 0px 0px 0px;
+                        }
+                        .popup-right {
+                            padding: 30px 20px;
+                        }
+                        .close-btn {
+                            left: 0px;
+                        }
+                        .popup {
+                            height: unset;
+                            padding: 10px;
+                        }
+                        .name-flex {
+                            display: flex;
+                            align-items: unset;
+                            justify-content: space-between;
+                            gap: 15px;
+                            flex-direction: column;
+                            width: 100%;
+                        }
+                    }
+                </style>
+                <script>
+                    function openRegisterPopup() {
+                        closeAllPopups();
+                        document.getElementById("registerPopup").style.display = "flex";
+                    }
+                
+                    function closeRegisterPopup() {
+                        document.getElementById("registerPopup").style.display = "none";
+                    }
+                
+                    function openLoginPopup() {
+                        closeAllPopups();
+                        document.getElementById("loginPopup").style.display = "flex";
+                    }
+                
+                    function closeLoginPopup() {
+                        document.getElementById("loginPopup").style.display = "none";
+                    }
+                
+                    function openForgotPasswordPopup() {
+                        closeAllPopups();
+                        document.getElementById("forgotPasswordPopup").style.display = "flex";
+                    }
+                
+                    function closeForgotPasswordPopup() {
+                        document.getElementById("forgotPasswordPopup").style.display = "none";
+                    }
+                
+                    function closeAllPopups() {
+                        document.getElementById("registerPopup").style.display = "none";
+                        document.getElementById("loginPopup").style.display = "none";
+                        document.getElementById("forgotPasswordPopup").style.display = "none";
+                    }
+                
+                    window.onclick = function(event) {
+                        if (event.target.classList.contains("popup-container")) {
+                            closeAllPopups();
+                        }
+                    };
+                </script>
+            </div>
+        </header>
+        <main>
+            <section class="subpage-background"> 
+                <div class="container">
+                    <h2 class="subpage-title">Cookie Policy</h2>
+                </div>
+            </section>
+            <section class="subpage-context-section">
+                <div class="container">
+                    <div class="text-context">
+                        <h3>Introduction</h3>
+                        <p>Daily Lotto uses cookies and similar technologies to enhance your browsing experience and improve our services. This Cookie Policy explains what cookies are, how we use them, and how you can manage your preferences.</p>
+                        
+                        <h3>What Are Cookies?</h3>
+                        <p>Cookies are small text files stored on your device when you visit a website. They help websites remember user preferences, enhance security, and analyze site traffic.</p>
+                        
+                        <h3>Types of Cookies We Use</h3>
+                        <ul>
+                            <li><strong>Essential Cookies:</strong> Necessary for the proper functioning of the website, such as security and authentication.</li>
+                            <li><strong>Performance Cookies:</strong> Help us analyze how visitors interact with our site to improve user experience.</li>
+                            <li><strong>Functional Cookies:</strong> Remember user preferences, such as language and login details.</li>
+                            <li><strong>Advertising Cookies:</strong> Used to deliver relevant ads based on user interests and browsing behavior.</li>
+                        </ul>
+                        
+                        <h3>How We Use Cookies</h3>
+                        <p>We use cookies to:</p>
+                        <ul>
+                            <li>Ensure our website functions properly.</li>
+                            <li>Analyze website traffic and usage patterns.</li>
+                            <li>Remember your preferences and settings.</li>
+                            <li>Improve security and prevent fraud.</li>
+                            <li>Provide targeted advertising and personalized content.</li>
+                        </ul>
+                        
+                        <h3>Managing Your Cookie Preferences</h3>
+                        <p>You can control or delete cookies through your browser settings. Most browsers allow you to block or delete cookies, but this may affect certain functionalities of our website.</p>
+                        
+                        <h3>Third-Party Cookies</h3>
+                        <p>Some third-party services, such as analytics and advertising providers, may place cookies on our website. These cookies are managed by third parties, and we recommend reviewing their privacy policies.</p>
+                        
+                        <h3>Updates to This Policy</h3>
+                        <p>We may update this Cookie Policy from time to time. Please check this page periodically for any changes.</p>
+                        
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions about our Cookie Policy, please contact us at support@dailylotto.com.au.</p>
+                    </div>
+                </div>
+            </section>     
+            <section class="responsible-warning-section">
+                <div class="container">
+                    <div class="responsible-context">
+                        <h2>Responsible Gambling</h2>
+                        <p>Think! About your choices. Gamble Responsibly. Call Gambling Help on 1800 858 858. GambleAware gambleaware.nsw.gov.au BetStop is the National Self-Exclusion Register. It’s a free service for customers who want to exclude from all online wagering providers. For more information visit betstop.gov.au</p>
+                        <p>Daily Lotto is operated under a licence issued by the New South Wales Government Department and is regulated by The New South Wales Independent Liquor & Gaming NSW. We are committed to Responsible Gambling.</p>
+                        <p>Daily Lotto logo is a trade mark of The Lottery Corporation Limited. All rights reserved.</p>
+                        <p class="restriction">Persons under 18 years of age are not permitted to gamble.</span>
+                    </div>
+                    <div class="payment-name">
+                        <p>Select from the following payment options</p>
+                        <ul>
+                            <li>
+                                <img src="images/visa.png" alt="Visa Payment System Image">
+                            </li>
+                            <li>
+                                <img src="images/gpay.png" alt="Google Payment System Image">
+                            </li>
+                            <li>
+                                <img src="images/paypal.png" alt="Paypal Payment System Image">
+                            </li>
+                            <li>
+                                <img src="images/mastercard.png" alt="Mastercard Payment System">
+                            </li>
+                            <li>
+                                <img src="images/american-express.png" alt="American Express Payment System">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-context">
+                    <div class="footer-logo">
+                        <img src="images/daily-lotto-white.png" alt="Daily Lotto Logo">
+                    </div>
+                    <div class="useful-link">
+                        <ul>
+                            <li><a href="terms-and-conditions.html">Terms and Conditions</a><span>|</span></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a><span>|</span></li>
+                            <li><a href="cookie-policy.html">Cookie Policy</a><span>|</span></li>
+                            <li>
+                                <a href="responsible-gaming.html">Responsible Gambling</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gambling-partners">
+                        <ul>
+                            <li>
+                                <a>
+                                    <img src="images/eighten-icon.png" alt="18 Plus">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/begambleaware.png" alt="Be Gamble Aware Logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gamblingcommission.gov.uk/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/gamblingcommission.png" alt="Gambling Commission">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discover.ecogra.org/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/ecogra.png" alt="Ecogra">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mga.org.mt/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/mga.png" alt="MGA">
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://www.bet365.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="images/bet365.png" alt="BET365">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vgccc.vic.gov.au/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/victoria-gambling-comission.png" alt="Victoria Gambling Commission">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gamstop.co.uk/" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/gamstop.png" alt="Gamstop">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright 2025 Daily Lotto Game | All Rights Resereved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(() => {
+                    var swiper = new Swiper(".review-slider", {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                        loop: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        }
+                    });
+                }, 100);
+            });
+        </script>    
+    </body>
+</html>
