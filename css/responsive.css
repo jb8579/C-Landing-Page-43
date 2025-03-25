@@ -1,0 +1,414 @@
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 96%;
+    }
+    .gambling-partners > ul {
+        flex-wrap: wrap;
+    }
+    .game-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .hero-images > img {
+        max-width: 600px;
+        top: -60px;
+    }
+    .hero-section {
+        padding: 100px 0px 0px 0px;
+        height: 500px;
+    }
+    .charity-overlay > h3 {
+        color: #313131;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    .review-card {
+        height: 280px !important;
+    }
+    .swiper-slide.review-card > p {
+        padding: 15px 0px 0px 0px;
+        height: 160px;
+    }
+    .support-card-1, .support-card-2 {
+        height: 400px;
+    }
+    .support-card-1 > p, .support-card-2 > p {
+        height: 80px;
+    }
+    .review-button > button {
+        padding: 8px 10px;
+        width: 265px;
+    }
+    .review-title > h2 {
+        width: 90%;
+    }
+    .responsible-context {
+        width: 86%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .review-card {
+        height: 230px !important;
+    }
+    .header-top-bar {
+        padding: 6px 0px;
+    }
+    .header-top-bar > p {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .header-top-bar > p > img {
+        width: 16px;
+        position: relative;
+        top: 3px;
+    }
+    .header-logo > a > img {
+        width: 115px;
+    }
+    .header-button {
+        gap: 6px;
+    }
+    .header-button > button {
+        width: 105px;
+        height: 38px;
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .hero-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero-context > img {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .hero-context {
+        text-align: center;
+    }
+    .hero-section {
+        padding: 40px 0px 10px 0px;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .hero-context > p {
+        font-size: 22px;
+        left: 0px;
+        padding: 15px 0px;
+    }
+    .hero-images > img {
+        top: 0px;
+    }
+    .hero-images > img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .game-section {
+        padding: 40px 0px;
+    }
+    h2.game-title, h2.charity-title, 
+    h2.achievement-title, h2.support-title, 
+    .review-title > h2, h2.result-title,
+    .responsible-context > h2 {
+        font-size: 36px;
+    }
+    .game-card-grid {
+        padding: 50px 0px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+    .charity-section {
+        padding: 40px 0px;
+    }
+    .charity-card {
+        margin-bottom: 40px;
+    }
+    .charity-card-grid {
+        padding: 50px 0px;
+    }
+    .achievement-section {
+        padding: 40px 0px;
+    }
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-top: 50px;
+    }
+    .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 50px;
+    }
+    .support-card-1, .support-card-2{
+        height: 430px;
+        padding: 40px 20px;
+    }
+    .review-section {
+        padding: 40px 0px;
+        margin: 40px 0px;
+    }
+    .review-title-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .review-title > h2 {
+        width: 100%;
+    }
+    .result-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0px 60px 0px;
+    }
+    .result-draw-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px 0px 0px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .result-card-1,  .result-card-2{
+        padding: 20px;
+        height: auto;
+        text-align: center;
+    }
+    .responsible-context {
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer {
+        padding: 40px 0px 21px 0px;
+        text-align: center;
+    }
+    .footer-logo > img {
+        width: 190px;
+    }
+    .useful-link > ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .useful-link > ul > li >  span {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .gambling-partners > ul {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .useful-link > ul > li > a {
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-decoration: underline;
+    }
+    .responsible-context > p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+    .responsible-context  > p.restriction {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header-top-bar {
+        padding: 6px 0px;
+    }
+    .header-top-bar > p {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .header-top-bar > p > img {
+        width: 16px;
+        position: relative;
+        top: 3px;
+    }
+    .header-logo > a > img {
+        width: 115px;
+    }
+    .header-button {
+        gap: 6px;
+    }
+    .header-button > button {
+        width: 105px;
+        height: 38px;
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .hero-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    .hero-context > img {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .hero-context {
+        text-align: center;
+    }
+    .hero-section {
+        padding: 40px 0px;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .hero-context > p {
+        font-size: 22px;
+        left: 0px;
+        padding: 15px 0px;
+    }
+    .hero-images > img {
+        top: 0px;
+    }
+    .game-section {
+        padding: 40px 0px;
+    }
+    h2.game-title, h2.charity-title, 
+    h2.achievement-title, h2.support-title, 
+    .review-title > h2, h2.result-title,
+    .responsible-context > h2 {
+        font-size: 36px;
+    }
+    .game-card-grid {
+        padding: 50px 0px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .charity-section {
+        padding: 40px 0px;
+    }
+    .achievement-section {
+        padding: 40px 0px;
+    }
+    .achievement-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding-top: 50px;
+    }
+    .support-grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 50px;
+    }
+    .support-card-1, .support-card-2{
+        height: auto;
+    }
+    .review-section {
+        padding: 40px 0px;
+        margin: 40px 0px;
+    }
+    .review-title-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .review-title > h2 {
+        width: 100%;
+    }
+    .result-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0px 60px 0px;
+    }
+    .result-draw-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0px 0px 0px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .result-card-1,  .result-card-2{
+        padding: 20px;
+        height: auto;
+        text-align: center;
+    }
+    .responsible-context {
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer {
+        padding: 40px 0px 21px 0px;
+        text-align: center;
+    }
+    .footer-logo > img {
+        width: 190px;
+    }
+    .useful-link > ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .useful-link > ul > li >  span {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .gambling-partners > ul {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .useful-link > ul > li > a {
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-decoration: underline;
+    }
+    .responsible-context > p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+    .responsible-context  > p.restriction {
+        font-size: 16px;
+    }
+    span.close-btn.close-btn-sm {
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+    }
+    .popup-right h2 {
+        font-size: 28px !important;
+    }
+    h2.subpage-title {
+        font-size: 30px;
+    }
+    .payment-name > ul {
+        flex-wrap: wrap;
+    }
+    .support-card-1, .support-card-2 {
+        padding: 40px 20px;
+    }
+    .review-card {
+        height: 250px !important;
+    }
+    .swiper-slide.review-card > p {
+        height: 140px;
+    }
+}
+@media screen and (min-width: 767px){
+    span.close-btn.close-btn-sm {
+        display: none;
+    }
+}

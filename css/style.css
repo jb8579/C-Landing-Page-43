@@ -70,7 +70,6 @@ button.login-btn{
     background-image: url('../images/blue-background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     padding: 80px 0px;
     height: 530px;
 }
@@ -168,33 +167,39 @@ button.game-signup-btn{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
-.charity-section{
+}.charity-section {
     background: rgba(0, 72, 150, 0.05);
-    padding: 80px 0px;
+    padding: 80px 0;
 }
-h2.charity-title{
+
+h2.charity-title {
     color: #313131;
     text-align: center;
     font-size: 46px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-transform: capitalize;
 }
-h2.charity-title > span{
+
+h2.charity-title > span {
     color: #EE7821;
 }
-.charity-card-grid{
+.charity-card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 70px 0px 130px 0px;
+    padding: 70px 0px;
+}
+.charity-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .charity-img > img {
     width: 100%;
+    display: block;
 }
 .charity-img {
     position: relative;
@@ -203,24 +208,42 @@ h2.charity-title > span{
 }
 .charity-overlay {
     position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 30px);
     border-radius: 10px;
     background-color: #FFF;
     box-shadow: 0px 4px 30px rgba(0, 72, 150, 0.35);
-    padding: 24px;
-    width: 360px;
+    padding: 16px;
+    width: 80%;
     max-width: 360px;
-    min-width: 360px;
-    transform: translateY(-60px);
-    z-index: 10;
-    margin-left: 26px;
-}
-.charity-overlay > h3{
-    color: #313131;
+    min-width: auto;
     text-align: center;
+    box-sizing: border-box;
+}
+.charity-overlay > h3 {
+    color: #313131;
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 32px; 
+    line-height: 1.5;
+}
+@media (max-width: 1024px) {
+    .charity-overlay {
+        width: 90%; 
+        max-width: 320px;
+    }
+}
+@media (max-width: 767px) {
+    .charity-card-grid {
+        grid-template-columns: 1fr;
+        gap: 58px;
+    }
+    .charity-overlay {
+        width: 90%;
+        max-width: 330px;
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 .achievement-section{
     padding: 80px 0px;
@@ -418,7 +441,7 @@ h2.support-title{
     border-radius: 10px;
     background: #FFF;
     padding: 40px 50px;
-    height: 230px;
+    height: 230px !important;
     border-radius: 10px;
     box-shadow: 0px 4px 30px 0px rgba(164, 70, 0, 0.22);
 }
@@ -439,6 +462,7 @@ h2.support-title{
     font-weight: 500;
     line-height: 26px; 
     padding: 15px 0px;
+    height: 110px;
 }
 .swiper-slide.review-card > ul {
     list-style: none;
