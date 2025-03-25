@@ -41,6 +41,7 @@
                 <div id="registerPopup" class="popup-container">
                     <div class="popup">
                         <div class="popup-right">
+                            <span class="close-btn  close-btn-sm" onclick="closeRegisterPopup()">&times;</span>
                             <h2>Create an account</h2>
                             <p>Create an account to join thousands of users worldwide</p>
                             <form id="registerForm">
@@ -74,13 +75,14 @@
                             <p class="have-account">Already have an account? <a href="#" onclick="openLoginPopup()">Log in</a></p>
                         </div>
                         <div class="popup-left">
-                            
-                            <span class="close-btn" onclick="closeRegisterPopup()">&times;</span></div>
+                            <span class="close-btn" onclick="closeRegisterPopup()">&times;</span>
+                        </div>
                     </div>
                 </div>
                 <div id="loginPopup" class="popup-container">
                     <div class="popup">
                         <div class="popup-right">
+                            <span class="close-btn  close-btn-sm" onclick="closeLoginPopup()">&times;</span>
                             <h2>Login to your account</h2>
                             <p>Login to your account to join thousands of users worldwide</p>
                             <form id="loginForm">
@@ -96,12 +98,14 @@
                             <p class="have-account">Don't have an account? <a href="#" onclick="openRegisterPopup()">Register</a></p>
                         </div>
                         <div class="popup-left-login">
-                            <span class="close-btn" onclick="closeLoginPopup()">&times;</span></div>
+                            <span class="close-btn" onclick="closeLoginPopup()">&times;</span>
+                        </div>
                     </div>
                 </div>
                 <div id="forgotPasswordPopup" class="popup-container">
                     <div class="popup">
                         <div class="popup-right">
+                            <span class="close-btn close-btn-sm" onclick="closeForgotPasswordPopup()">&times;</span>
                             <h2>RESET PASSWORD</h2>
                             <p>Enter your email to receive a reset link</p>
                             <form id="forgotPasswordForm">
@@ -113,7 +117,8 @@
                             <p class="have-account"><a href="#" onclick="openLoginPopup()">Back to Login</a></p>
                         </div>
                         <div class="popup-left-login">
-                            <span class="close-btn" onclick="closeForgotPasswordPopup()">&times;</span></div>
+                            <span class="close-btn" onclick="closeForgotPasswordPopup()">&times;</span>
+                        </div>
                     </div>
                 </div>
                 <style>
