@@ -245,10 +245,10 @@
         gap: 6px;
     }
     .header-button > button {
-        width: 105px;
+        width: unset;
         height: 38px;
         padding: 6px 20px;
-        font-size: 16px;
+        font-size: 14px;
     }
     .container {
         width: 100%;
@@ -405,6 +405,9 @@
     }
     .swiper-slide.review-card > p {
         height: 140px;
+    }
+    .game-offer-part > img {
+        width: 105px;
     }
 }
 @media screen and (min-width: 767px){
